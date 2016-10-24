@@ -1,0 +1,220 @@
+/* Coolors Exported Palette - coolors.co/f26c99-d81752-b4843a-c8a693-b1b3b5 */
+/* HSL */
+/* RGB */
+/* line 17, ../compass/sass/styles.scss */
+body {
+  background-color: #FFF;
+  color: #d81752;
+  text-align: center;
+  margin: 0px;
+  position: relative;
+}
+
+/* line 24, ../compass/sass/styles.scss */
+span {
+  font-size: 1.5em;
+}
+
+/*font-family: 'Unkempt', cursive;  (extra front style)*/
+/* line 29, ../compass/sass/styles.scss */
+.jumbotron {
+  background-image: url("../img/banner.png");
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-position: 0% 0%;
+  background-size: cover;
+  height: 500px;
+  background-repeat: no-repeat;
+  color: #d81752;
+}
+
+/* line 41, ../compass/sass/styles.scss */
+.jumbotron p {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 200;
+}
+
+/* line 47, ../compass/sass/styles.scss */
+#nav {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), #b4843a), url("../img/gold.jpg");
+  height: 50px;
+  width: 100%;
+}
+/* line 53, ../compass/sass/styles.scss */
+#nav .navbar .container li a {
+  color: #d81752;
+}
+/* line 58, ../compass/sass/styles.scss */
+#nav .navbar-brand {
+  font-family: 'Henny Penny', cursive;
+  font-color: #d81752;
+}
+/* line 62, ../compass/sass/styles.scss */
+#nav .affix {
+  position: fixed;
+  top: 0;
+  margin-bottom: 20px;
+}
+
+/* line 69, ../compass/sass/styles.scss */
+.intro {
+  margin-top: 50px;
+}
+
+/* line 73, ../compass/sass/styles.scss */
+.section-divider {
+  z-index: 999;
+  width: 100%;
+  display: table;
+  max-height: 450px;
+  border-bottom: 2px solid #E6EAED;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  margin-top: 45px;
+  background-position: center center;
+  background-size: 100%;
+  background-size: cover;
+  background-attachment: relative;
+  text-align: center;
+}
+/* line 98, ../compass/sass/styles.scss */
+.section-divider .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 106, ../compass/sass/styles.scss */
+.divider1 {
+  background-image: url(../img/feet.jpg);
+  margin-top: 0px;
+}
+
+/* line 112, ../compass/sass/styles.scss */
+.divider2 {
+  background-image: url(../img/treeblossom.jpg);
+  margin-top: 0px;
+}
+
+/* line 117, ../compass/sass/styles.scss */
+section {
+  margin: 30px 0px 30px 0px;
+}
+
+/* line 122, ../compass/sass/styles.scss */
+.login, .register {
+  background-color: white;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+/* line 131, ../compass/sass/styles.scss */
+.loginheading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* line 135, ../compass/sass/styles.scss */
+.loginbottomtext {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* line 139, ../compass/sass/styles.scss */
+.pagecontainer {
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 147, ../compass/sass/styles.scss */
+.pageheader {
+  width: 100%;
+  height: 60px;
+  background-color: #ff6800;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 154, ../compass/sass/styles.scss */
+.menubutton {
+  color: white;
+  background-color: #ff6800;
+  border: 0px solid transparent;
+  font-size: 20pt;
+  margin-top: 10px;
+}
+
+/* line 161, ../compass/sass/styles.scss */
+.pagetitle {
+  color: white;
+  margin: 10px;
+}
+
+/* line 165, ../compass/sass/styles.scss */
+.contentheight {
+  height: 300px;
+}
+
+/* line 174, ../compass/sass/styles.scss */
+.affix {
+  right: 0px;
+}
+
+/* line 178, ../compass/sass/styles.scss */
+.affix-top {
+  right: 0px;
+  position: fixed;
+}
+
+/* line 183, ../compass/sass/styles.scss */
+.scroll-debug {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* line 192, ../compass/sass/styles.scss */
+.thumbnailOption img {
+  padding: 5px;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 208, ../compass/sass/styles.scss */
+  section {
+    width: 100%;
+  }
+  /* line 210, ../compass/sass/styles.scss */
+  section img.profileImg {
+    max-height: 425px;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  /* line 218, ../compass/sass/styles.scss */
+  section {
+    width: 100%;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  /* line 225, ../compass/sass/styles.scss */
+  section {
+    width: 100%;
+    float: none;
+  }
+}

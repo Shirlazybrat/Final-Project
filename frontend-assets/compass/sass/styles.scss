@@ -1,0 +1,229 @@
+/* Coolors Exported Palette - coolors.co/f26c99-d81752-b4843a-c8a693-b1b3b5 */
+
+/* HSL */
+// $color1: hsla(340%, 84%, 69%, 1);  #f26c99
+// $color2: hsla(342%, 81%, 47%, 1);  #d81752
+// $color3: hsla(36%, 51%, 47%, 1);  #b4843a
+// $color4: hsla(22%, 33%, 68%, 1);  #c8a693
+// $color5: hsla(210%, 3%, 70%, 1);  #b1b3b5
+
+/* RGB */
+// $color1: rgba(242, 108, 153, 1);
+// $color2: rgba(216, 23, 82, 1);
+// $color3: rgba(180, 132, 58, 1);
+// $color4: rgba(200, 166, 147, 1);
+// $color5: rgba(177, 179, 181, 1);
+
+body {
+	background-color: #FFF;
+	color: #d81752;
+	text-align: center;
+	margin: 0px;
+	position: relative;
+}
+span {
+	font-size: 1.5em;
+}
+/*font-family: 'Unkempt', cursive;  (extra front style)*/
+
+.jumbotron {
+	background-image: url("../img/banner.png");
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background-position: 0% 0%;
+    background-size: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+    color: #d81752;
+    // text-shadow: #385D3E 0.3em 0.3em 0.3em;
+}
+
+	.jumbotron p {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 200;
+	}
+
+#nav {
+	background-image: linear-gradient(to top, rgba(0,0,0, 0.1), rgba(180, 132, 58, 25)),url("../img/gold.jpg");
+	height: 50px;
+	width: 100%;
+	.navbar {
+		.container{
+			li a{
+			color: #d81752;
+			}
+		}
+	}
+	.navbar-brand {
+	font-family: 'Henny Penny', cursive;
+	font-color: #d81752;
+	}
+	.affix {
+    position: fixed;
+    top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.intro {
+	margin-top: 50px;
+}
+
+.section-divider {
+    z-index: 999;
+    width: 100%;
+    display: table;
+    max-height: 450px;
+    border-bottom: 2px solid #E6EAED;
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    margin-top: 45px;
+    background-position: center center;
+    // -webkit-background-size: 100%;
+    // -moz-background-size: 100%;
+    // -o-background-size: 100%;
+    background-size: 100%;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;
+    text-align: center;
+
+    .container {
+    	padding-right: 15px;
+    	padding-left: 15px;
+    	margin-right: auto;
+    	margin-left: auto;
+    }
+}
+
+.divider1 {
+    background-image: url(../img/feet.jpg);
+    // background-image: linear-gradient(to top, rgba(0,0,0, 0.1), rgba(0,0,0, 25)),url(../img/feet.jpg);
+    margin-top: 0px;
+}
+
+.divider2 {
+    background-image: url(../img/treeblossom.jpg);
+    margin-top: 0px;
+}
+ 
+section {
+	margin: 30px 0px 30px 0px;
+}
+/////////////Login section/////////////////////////
+
+.login, .register{
+		background-color: white;
+		width: 500px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		margin-top: 5%;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+	}
+	.loginheading{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.loginbottomtext{
+		text-align: center;
+		margin-top: 20px;
+	}
+	.pagecontainer{
+		margin-top: 30px;
+		background-color: white; 
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		margin-left: 20px;
+		margin-right: 20px;
+		
+	}
+	.pageheader {
+		width: 100%;
+		height: 60px;
+		background-color: #ff6800;
+		margin: 0;
+		padding: 0;
+	}
+	.menubutton{
+	color: white;
+    background-color: #ff6800;
+	border: 0px solid transparent;
+	font-size: 20pt;
+	margin-top: 10px;
+	}
+	.pagetitle{
+		color: white;
+		margin: 10px;
+	}
+	.contentheight{
+		height: 300px;
+	}
+	//////////////Cart Style//////////////////////
+         
+        #divTotal {
+            //background-color: green;
+        }
+         
+        .affix {
+            right: 0px;
+        }
+         
+        .affix-top {
+            right: 0px;
+            position: fixed;
+        }
+         
+        .scroll-debug {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        //////////////////////////////////////////
+
+//////////////options Style//////////////////////
+.thumbnailOption {
+	img{
+		padding:5px;
+		width: 250px;
+		height: 250px;
+		position:relative;
+	    overflow:hidden;
+	}
+}
+
+
+
+/////////////////////////////////////////////////
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	section {
+  		width:100%;
+  		img.profileImg {
+	 	max-height: 425px;
+	 }
+    }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	section {
+  		width:100%;
+	}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	section {
+  		width:100%;
+      	float:none;
+	}
+}
