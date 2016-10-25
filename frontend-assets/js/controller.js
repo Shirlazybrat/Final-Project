@@ -32,7 +32,7 @@ finalProject.config(function($routeProvider){
 
 
 finalProject.controller('mainController', function($scope, $http, $firebase){
-	
+	var apiPath = "http://localhost:8000/";
 	
 // var ref = new Firebase("https://www.gstatic.com/firebasejs/3.5.2/firebase.js")
 // var fb = $firebase(ref);
@@ -46,8 +46,43 @@ finalProject.controller('mainController', function($scope, $http, $firebase){
 //   };
 //   firebase.initializeApp(config);
 
+	$scope.register = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/register', {
+	 		username: $scope.username,
+	 		password: $scope.password,
+	 		password2: $scope.password2,
+	 		email: $scope.email
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.message == 'added'){
+	 			$location.path('/options');
+	 			$cookies.put('token', response.data.token);
+	 			$cookies.put('username', $scope.username);
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+$scope.username = $scope.register();
 
-	// var apiUrl = "http://localhost:8000/";
+$scope.login = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/login', {
+	 		username: $scope.username,
+	 		password: $scope.password
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.success == 'userFound'){
+	 			$location.path('/options');
+	 			$cookies.put('username', $scope.username);
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+
+// $scope.username = $scope.login();
 
 	// $scope.home = 'home';
 

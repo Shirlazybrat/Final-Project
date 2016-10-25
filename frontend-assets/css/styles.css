@@ -100,7 +100,18 @@ body span {
   width: 300px;
 }
 
-/* line 107, ../compass/sass/styles.scss */
+/* line 108, ../compass/sass/styles.scss */
+.split img {
+  height: 400px;
+  width: 600px;
+}
+
+/* line 115, ../compass/sass/styles.scss */
+.founder img {
+  height: 300px;
+}
+
+/* line 120, ../compass/sass/styles.scss */
 .section-divider {
   z-index: 999;
   width: 100%;
@@ -117,7 +128,7 @@ body span {
   background-attachment: relative;
   text-align: center;
 }
-/* line 132, ../compass/sass/styles.scss */
+/* line 145, ../compass/sass/styles.scss */
 .section-divider .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -125,30 +136,30 @@ body span {
   margin-left: auto;
 }
 
-/* line 140, ../compass/sass/styles.scss */
+/* line 153, ../compass/sass/styles.scss */
 .divider1 {
   background-image: url(../img/feet.jpg);
   margin-top: 0px;
 }
 
-/* line 146, ../compass/sass/styles.scss */
+/* line 159, ../compass/sass/styles.scss */
 .divider2 {
   background-image: url(../img/treeblossom.jpg);
   margin-top: 0px;
 }
 
-/* line 151, ../compass/sass/styles.scss */
+/* line 164, ../compass/sass/styles.scss */
 section {
   margin: 30px 0px 30px 0px;
 }
 
-/* line 156, ../compass/sass/styles.scss */
+/* line 169, ../compass/sass/styles.scss */
 footer {
   background-color: #c8a693;
   padding: 10px;
 }
 
-/* line 162, ../compass/sass/styles.scss */
+/* line 175, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -159,19 +170,19 @@ footer {
   padding-top: 10px;
 }
 
-/* line 171, ../compass/sass/styles.scss */
+/* line 184, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 175, ../compass/sass/styles.scss */
+/* line 188, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 179, ../compass/sass/styles.scss */
+/* line 192, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -180,7 +191,7 @@ footer {
   margin-right: 20px;
 }
 
-/* line 187, ../compass/sass/styles.scss */
+/* line 200, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -189,7 +200,7 @@ footer {
   padding: 0;
 }
 
-/* line 194, ../compass/sass/styles.scss */
+/* line 207, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -198,18 +209,18 @@ footer {
   margin-top: 10px;
 }
 
-/* line 201, ../compass/sass/styles.scss */
+/* line 214, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 205, ../compass/sass/styles.scss */
+/* line 218, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 212, ../compass/sass/styles.scss */
+/* line 225, ../compass/sass/styles.scss */
 .thumbnailOption img {
   padding: 5px;
   width: 250px;
@@ -218,76 +229,27 @@ footer {
   overflow: hidden;
 }
 
-/*!
- * Bootstrap Modal
- *
- * Copyright Jordan Schroter
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Boostrap 3 patch for for bootstrap-modal. Include BEFORE bootstrap-modal.css!
- */
-/* line 234, ../compass/sass/styles.scss */
-body.modal-open,
-.modal-open .navbar-fixed-top,
-.modal-open .navbar-fixed-bottom {
-  margin-right: 0;
-}
-
-/* line 240, ../compass/sass/styles.scss */
-.modal {
-  left: 50%;
-  bottom: auto;
-  right: auto;
-  z-index: 1050;
-  padding: 0;
-  width: 500px;
-  margin-left: -250px;
-  background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
-}
-
-/* line 257, ../compass/sass/styles.scss */
-.modal.container {
-  max-width: none;
-}
-
-/* line 261, ../compass/sass/styles.scss */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-}
-
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 274, ../compass/sass/styles.scss */
+  /* line 241, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
-  /* line 276, ../compass/sass/styles.scss */
+  /* line 243, ../compass/sass/styles.scss */
   section img.profileImg {
     max-height: 425px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 284, ../compass/sass/styles.scss */
+  /* line 251, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 291, ../compass/sass/styles.scss */
+  /* line 258, ../compass/sass/styles.scss */
   section {
     width: 100%;
     float: none;
