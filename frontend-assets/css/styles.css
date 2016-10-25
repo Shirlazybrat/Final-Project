@@ -1,7 +1,7 @@
 /* Coolors Exported Palette - coolors.co/f26c99-d81752-b4843a-c8a693-b1b3b5 */
 /* HSL */
 /* RGB */
-/* line 17, ../compass/sass/styles.scss */
+/* line 20, ../compass/sass/styles.scss */
 body {
   background-color: #FFF;
   color: #d81752;
@@ -9,14 +9,37 @@ body {
   margin: 0px;
   position: relative;
 }
-
-/* line 24, ../compass/sass/styles.scss */
-span {
+/* line 26, ../compass/sass/styles.scss */
+body h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 200px;
+}
+/* line 31, ../compass/sass/styles.scss */
+body h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+}
+/* line 35, ../compass/sass/styles.scss */
+body h3 {
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+}
+/* line 39, ../compass/sass/styles.scss */
+body h4 {
+  font-family: 'Handlee', cursive;
+}
+/* line 42, ../compass/sass/styles.scss */
+body p {
+  font-family: 'Handlee', cursive;
+}
+/* line 45, ../compass/sass/styles.scss */
+body span {
   font-size: 1.5em;
 }
 
 /*font-family: 'Unkempt', cursive;  (extra front style)*/
-/* line 29, ../compass/sass/styles.scss */
+/* line 52, ../compass/sass/styles.scss */
 .jumbotron {
   background-image: url("../img/banner.png");
   margin-bottom: 0px;
@@ -28,46 +51,56 @@ span {
   color: #d81752;
 }
 
-/* line 41, ../compass/sass/styles.scss */
+/* line 64, ../compass/sass/styles.scss */
 .jumbotron p {
   margin-bottom: 20px;
   font-size: 50px;
   font-weight: 200;
 }
 
-/* line 47, ../compass/sass/styles.scss */
+/* line 70, ../compass/sass/styles.scss */
 #nav {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent), url("../img/gold.jpg");
-  height: 50px;
+  height: 55px;
   width: 100%;
 }
-/* line 53, ../compass/sass/styles.scss */
+/* line 75, ../compass/sass/styles.scss */
+#nav .navbar .container {
+  background-color: #b4843a;
+  opacity: 0.7;
+}
+/* line 78, ../compass/sass/styles.scss */
 #nav .navbar .container li a {
   color: #d81752;
+  opacity: 1;
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
 }
-/* line 58, ../compass/sass/styles.scss */
-#nav .navbar-brand {
-  font-family: 'Henny Penny', cursive;
+/* line 86, ../compass/sass/styles.scss */
+#nav a.navbar-brand {
+  font-family: 'Dancing Script', cursive;
   font-color: #d81752;
+  font-size: 30px;
 }
-/* line 62, ../compass/sass/styles.scss */
+/* line 91, ../compass/sass/styles.scss */
 #nav .affix {
   position: fixed;
   top: 0;
   margin-bottom: 20px;
+  z-index: 100;
 }
 
-/* line 69, ../compass/sass/styles.scss */
+/* line 99, ../compass/sass/styles.scss */
 .features {
   margin-top: 50px;
 }
-/* line 71, ../compass/sass/styles.scss */
+/* line 101, ../compass/sass/styles.scss */
 .features img {
   height: 200px;
   width: 300px;
 }
 
-/* line 77, ../compass/sass/styles.scss */
+/* line 107, ../compass/sass/styles.scss */
 .section-divider {
   z-index: 999;
   width: 100%;
@@ -84,7 +117,7 @@ span {
   background-attachment: relative;
   text-align: center;
 }
-/* line 102, ../compass/sass/styles.scss */
+/* line 132, ../compass/sass/styles.scss */
 .section-divider .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -92,29 +125,30 @@ span {
   margin-left: auto;
 }
 
-/* line 110, ../compass/sass/styles.scss */
+/* line 140, ../compass/sass/styles.scss */
 .divider1 {
   background-image: url(../img/feet.jpg);
   margin-top: 0px;
 }
 
-/* line 116, ../compass/sass/styles.scss */
+/* line 146, ../compass/sass/styles.scss */
 .divider2 {
   background-image: url(../img/treeblossom.jpg);
   margin-top: 0px;
 }
 
-/* line 121, ../compass/sass/styles.scss */
+/* line 151, ../compass/sass/styles.scss */
 section {
   margin: 30px 0px 30px 0px;
 }
 
-/* line 126, ../compass/sass/styles.scss */
+/* line 156, ../compass/sass/styles.scss */
 footer {
   background-color: #c8a693;
+  padding: 10px;
 }
 
-/* line 131, ../compass/sass/styles.scss */
+/* line 162, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -125,19 +159,19 @@ footer {
   padding-top: 10px;
 }
 
-/* line 140, ../compass/sass/styles.scss */
+/* line 171, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 144, ../compass/sass/styles.scss */
+/* line 175, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 148, ../compass/sass/styles.scss */
+/* line 179, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -146,7 +180,7 @@ footer {
   margin-right: 20px;
 }
 
-/* line 156, ../compass/sass/styles.scss */
+/* line 187, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -155,7 +189,7 @@ footer {
   padding: 0;
 }
 
-/* line 163, ../compass/sass/styles.scss */
+/* line 194, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -164,18 +198,18 @@ footer {
   margin-top: 10px;
 }
 
-/* line 170, ../compass/sass/styles.scss */
+/* line 201, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 174, ../compass/sass/styles.scss */
+/* line 205, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 181, ../compass/sass/styles.scss */
+/* line 212, ../compass/sass/styles.scss */
 .thumbnailOption img {
   padding: 5px;
   width: 250px;
@@ -184,27 +218,76 @@ footer {
   overflow: hidden;
 }
 
+/*!
+ * Bootstrap Modal
+ *
+ * Copyright Jordan Schroter
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Boostrap 3 patch for for bootstrap-modal. Include BEFORE bootstrap-modal.css!
+ */
+/* line 234, ../compass/sass/styles.scss */
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0;
+}
+
+/* line 240, ../compass/sass/styles.scss */
+.modal {
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  z-index: 1050;
+  padding: 0;
+  width: 500px;
+  margin-left: -250px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+}
+
+/* line 257, ../compass/sass/styles.scss */
+.modal.container {
+  max-width: none;
+}
+
+/* line 261, ../compass/sass/styles.scss */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+}
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 197, ../compass/sass/styles.scss */
+  /* line 274, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
-  /* line 199, ../compass/sass/styles.scss */
+  /* line 276, ../compass/sass/styles.scss */
   section img.profileImg {
     max-height: 425px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 207, ../compass/sass/styles.scss */
+  /* line 284, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 214, ../compass/sass/styles.scss */
+  /* line 291, ../compass/sass/styles.scss */
   section {
     width: 100%;
     float: none;

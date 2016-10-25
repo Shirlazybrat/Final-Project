@@ -14,16 +14,39 @@
 // $color4: rgba(200, 166, 147, 1);
 // $color5: rgba(177, 179, 181, 1);
 
+// font-family: 'Dancing Script', cursive; (bold)
+// font-family: 'Handlee', cursive;  
+
 body {
 	background-color: #FFF;
 	color: #d81752;
 	text-align: center;
 	margin: 0px;
 	position: relative;
+	h1{
+		font-family: 'Dancing Script', cursive;
+		font-weight: bold;
+		font-size: 200px;
+	}
+	h2 {
+		font-family: 'Dancing Script', cursive;
+		font-size: 50px;
+	}
+	h3 {
+		font-family: 'Handlee', cursive;
+		font-weight: bold;
+	}
+	h4 {
+		font-family: 'Handlee', cursive;
+	}
+	p{
+		font-family: 'Handlee', cursive;
+	}
+	span{
+		font-size: 1.5em;
+	}
 }
-span {
-	font-size: 1.5em;
-}
+
 /*font-family: 'Unkempt', cursive;  (extra front style)*/
 
 .jumbotron {
@@ -46,23 +69,30 @@ span {
 
 #nav {
 	background-image: linear-gradient(to top, rgba(0,0,0, 0.1), rgba(0,0,0, 0)),url("../img/gold.jpg");
-	height: 50px;
+	height: 55px;
 	width: 100%;
 	.navbar {
 		.container{
+			background-color: #b4843a;
+  			opacity: 0.7;
 			li a{
 			color: #d81752;
+			opacity: 1;
+			font-family: 'Dancing Script', cursive;
+			font-size: 30px;
 			}
 		}
 	}
-	.navbar-brand {
-	font-family: 'Henny Penny', cursive;
+	a.navbar-brand {
+	font-family: 'Dancing Script', cursive;
 	font-color: #d81752;
+	font-size: 30px;
 	}
 	.affix {
     position: fixed;
     top: 0;
     margin-bottom: 20px;
+    z-index: 100;
   }
 }
 
@@ -125,6 +155,7 @@ section {
 
 footer {
 	background-color: #c8a693;
+	padding: 10px;
 }
 /////////////Login section/////////////////////////
 
@@ -190,7 +221,53 @@ footer {
 
 
 /////////////////////////////////////////////////
+/*!
+ * Bootstrap Modal
+ *
+ * Copyright Jordan Schroter
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Boostrap 3 patch for for bootstrap-modal. Include BEFORE bootstrap-modal.css!
+ */
 
+body.modal-open, 
+.modal-open .navbar-fixed-top, 
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0;
+}
+
+.modal {
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  z-index: 1050;
+  padding: 0;
+  width: 500px;
+  margin-left: -250px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+}
+
+.modal.container {
+  max-width: none;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+}
+
+/////////////////////////////////////////////
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
