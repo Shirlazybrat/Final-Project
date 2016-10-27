@@ -1,4 +1,4 @@
-var finalProject = angular.module('finalProject', ['ngRoute', 'firebase']);
+var finalProject = angular.module('finalProject', ['ngRoute']);
 
 finalProject.config(function($routeProvider){
 	$routeProvider
@@ -31,7 +31,7 @@ finalProject.config(function($routeProvider){
 
 
 
-finalProject.controller('mainController', function($scope, $http, $firebase){
+finalProject.controller('mainController', function($scope, $http){
 	var apiPath = "http://localhost:8000/";
 	
 // var ref = new Firebase("https://www.gstatic.com/firebasejs/3.5.2/firebase.js")
@@ -48,39 +48,62 @@ finalProject.controller('mainController', function($scope, $http, $firebase){
 
 	$scope.register = function(){
 	 	console.log($scope.username);
-	 	$http.post(apiPath + '/register', {
-	 		username: $scope.username,
-	 		password: $scope.password,
-	 		password2: $scope.password2,
-	 		email: $scope.email
-	 	}).then(function successCallback(response){
-	 		console.log(response);
-	 		if(response.data.message == 'added'){
-	 			$location.path('/options');
-	 			$cookies.put('token', response.data.token);
-	 			$cookies.put('username', $scope.username);
-	 		}
-	 	}, function errorCallback(response){
-	 		console.log(response);
-	 	});
+	 	// $http.post(apiPath + '/register', {
+	 	// 	username: $scope.username,
+	 	// 	password: $scope.password,
+	 	// 	password2: $scope.password2,
+	 	// 	email: $scope.email
+	 	// }).then(function successCallback(response){
+	 	// 	console.log(response);
+	 	// 	if(response.data.message == 'added'){
+	 	// 		$location.path('/options');
+	 	// 		$cookies.put('token', response.data.token);
+	 	// 		$cookies.put('username', $scope.username);
+	 	// 	}
+	 	// }, function errorCallback(response){
+	 	// 	console.log(response);
+	 	// });
 	 };
 $scope.username = $scope.register();
 
 $scope.login = function(){
 	 	console.log($scope.username);
-	 	$http.post(apiPath + '/login', {
-	 		username: $scope.username,
-	 		password: $scope.password
-	 	}).then(function successCallback(response){
-	 		console.log(response);
-	 		if(response.data.success == 'userFound'){
-	 			$location.path('/options');
-	 			$cookies.put('username', $scope.username);
-	 		}
-	 	}, function errorCallback(response){
-	 		console.log(response);
-	 	});
+	 	// $http.post(apiPath + '/login', {
+	 	// 	username: $scope.username,
+	 	// 	password: $scope.password
+	 	// }).then(function successCallback(response){
+	 	// 	console.log(response);
+	 	// 	if(response.data.success == 'userFound'){
+	 	// 		$location.path('/options');
+	 	// 		$cookies.put('username', $scope.username);
+	 	// 	}
+	 	// }, function errorCallback(response){
+	 	// 	console.log(response);
+	 	// });
 	 };
+$scope.show = false;
+$scope.task = [
+		{
+			title: "Test1",
+			who: "Donna",
+		},
+		{
+			title: "Test2",
+			who: "Tam",
+		} 
+	];
+
+	console.log($scope.task);
+
+	$scope.removeTask = function(){
+		$scope.task.splice(index,1);
+	}
+
+	$scope.addTask = function(){
+		$scope.task.push($scope.newTask);
+		$scope.newTask = {};
+		console.log($scope.newTask);
+	}
 
 // $scope.username = $scope.login();
 

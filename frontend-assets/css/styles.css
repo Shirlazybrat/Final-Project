@@ -96,31 +96,107 @@ body span {
 }
 /* line 101, ../compass/sass/styles.scss */
 .features img {
-  height: 200px;
-  width: 300px;
+  width: 200%;
+}
+/* line 105, ../compass/sass/styles.scss */
+.features .hovereffect {
+  width: 112%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+/* line 115, ../compass/sass/styles.scss */
+.features .hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+/* line 124, ../compass/sass/styles.scss */
+.features .hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+/* line 131, ../compass/sass/styles.scss */
+.features .hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/* line 140, ../compass/sass/styles.scss */
+.features .hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 149, ../compass/sass/styles.scss */
+.features .hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+}
+/* line 158, ../compass/sass/styles.scss */
+.features .hovereffect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+  width: 420px;
+}
+/* line 163, ../compass/sass/styles.scss */
+.features .hovereffect a.info, .features .hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+/* line 175, ../compass/sass/styles.scss */
+.features .hovereffect:hover a.info, .features .hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-/* line 108, ../compass/sass/styles.scss */
+/* line 185, ../compass/sass/styles.scss */
 .split img {
   height: 400px;
   width: 600px;
 }
 
-/* line 115, ../compass/sass/styles.scss */
+/* line 192, ../compass/sass/styles.scss */
 .founder img {
   height: 300px;
+  border-radius: 50%;
 }
 
-/* line 120, ../compass/sass/styles.scss */
+/* line 198, ../compass/sass/styles.scss */
 .section-divider {
   z-index: 999;
   width: 100%;
   display: table;
-  max-height: 450px;
+  max-height: 250px;
   border-bottom: 2px solid #E6EAED;
   box-sizing: border-box;
-  padding-top: 30px;
-  padding-bottom: 70px;
   margin-top: 45px;
   background-position: center center;
   background-size: 100%;
@@ -128,7 +204,7 @@ body span {
   background-attachment: relative;
   text-align: center;
 }
-/* line 145, ../compass/sass/styles.scss */
+/* line 221, ../compass/sass/styles.scss */
 .section-divider .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -136,30 +212,56 @@ body span {
   margin-left: auto;
 }
 
-/* line 153, ../compass/sass/styles.scss */
+/* line 229, ../compass/sass/styles.scss */
 .divider1 {
   background-image: url(../img/feet.jpg);
   margin-top: 0px;
 }
 
-/* line 159, ../compass/sass/styles.scss */
+/* line 235, ../compass/sass/styles.scss */
 .divider2 {
   background-image: url(../img/treeblossom.jpg);
   margin-top: 0px;
 }
 
-/* line 164, ../compass/sass/styles.scss */
+/* line 240, ../compass/sass/styles.scss */
 section {
   margin: 30px 0px 30px 0px;
 }
 
-/* line 169, ../compass/sass/styles.scss */
+/* line 244, ../compass/sass/styles.scss */
+thead {
+  font-size: 20px;
+}
+
+/* line 248, ../compass/sass/styles.scss */
+tbody, thead {
+  margin: 20px;
+}
+
+/* line 252, ../compass/sass/styles.scss */
+th, td {
+  padding: 20px;
+}
+
+/* line 256, ../compass/sass/styles.scss */
+table {
+  margin: auto;
+}
+
+/* line 261, ../compass/sass/styles.scss */
 footer {
   background-color: #c8a693;
   padding: 10px;
+  margin-top: 0px;
 }
 
-/* line 175, ../compass/sass/styles.scss */
+/* line 268, ../compass/sass/styles.scss */
+label {
+  font-family: 'Handlee', cursive;
+}
+
+/* line 272, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -170,19 +272,19 @@ footer {
   padding-top: 10px;
 }
 
-/* line 184, ../compass/sass/styles.scss */
+/* line 281, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 188, ../compass/sass/styles.scss */
+/* line 285, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 192, ../compass/sass/styles.scss */
+/* line 289, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -191,7 +293,7 @@ footer {
   margin-right: 20px;
 }
 
-/* line 200, ../compass/sass/styles.scss */
+/* line 297, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -200,7 +302,7 @@ footer {
   padding: 0;
 }
 
-/* line 207, ../compass/sass/styles.scss */
+/* line 304, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -209,18 +311,18 @@ footer {
   margin-top: 10px;
 }
 
-/* line 214, ../compass/sass/styles.scss */
+/* line 311, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 218, ../compass/sass/styles.scss */
+/* line 315, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 225, ../compass/sass/styles.scss */
+/* line 322, ../compass/sass/styles.scss */
 .thumbnailOption img {
   padding: 5px;
   width: 250px;
@@ -231,25 +333,25 @@ footer {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 241, ../compass/sass/styles.scss */
+  /* line 338, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
-  /* line 243, ../compass/sass/styles.scss */
+  /* line 340, ../compass/sass/styles.scss */
   section img.profileImg {
     max-height: 425px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 251, ../compass/sass/styles.scss */
+  /* line 348, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 258, ../compass/sass/styles.scss */
+  /* line 355, ../compass/sass/styles.scss */
   section {
     width: 100%;
     float: none;

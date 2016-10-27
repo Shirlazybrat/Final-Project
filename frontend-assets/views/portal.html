@@ -1,89 +1,109 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-8">
 		<h2>Wedding Details</h2>
 		<h3>Date: {{date}}</h3>
 		<h3>Location: {{location}}</h3>
 		<h3>Budget: {{budget}}</h3>
 		<h3>etc: {{more}}</h3>
 		</div>
-	</div>
-</div>
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 maids">
+	
+		<div class="col-md-4 maids">
 		<h2>Bridal Party</h2>
 			<ul class="list-group">
 				<li ng-repeat="maid in maids track by $index" class="list-group-item clearfix">
-					<img src="#" alt="...">
+					<div><img src="#" alt="..."></div>
 					<div><h4>{{maid.name}}</h4></div>
 					<div><p>{{maid.status}}</p></div>
 				</li>
 			</ul>
-			<div class="row">
-
-    <div ng-controller="ModalDemoCtrl as $ctrl" class="modal-demo">
-    <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
-        </div>
-        <div class="modal-body" id="modal-body">
-            <ul>
-                <li ng-repeat="item in $ctrl.items">
-                    <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
-                </li>
-            </ul>
-            Selected: <b>{{ $ctrl.selected.item }}</b>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
-            <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
-        </div>
-    </script>
-    <script type="text/ng-template" id="stackedModal.html">
-        <div class="modal-header">
-            <h3 class="modal-title" id="modal-title-{{name}}">The {{name}} modal!</h3>
-        </div>
-        <div class="modal-body" id="modal-body-{{name}}">
-            Having multiple modals open at once is probably bad UX but it's technically possible.
-        </div>
-    </script>
-
-    <button type="button" class="btn btn-default btn-sm" ng-click="$ctrl.open()" btn-sm text-center" data-toggle="modal">Enter Brideamaid</button>
-    
-    <div ng-show="$ctrl.selected">Selection from a modal: {{ $ctrl.selected }}</div>
-    <div class="modal-parent">
-    </div>
-</div>
-    
-  </div>
-</div>
-
-
-
-		<div class="col-md-4 items">
-			<h2>To Do</h2>
-			<ul>
-				<li ng-repeat="item in items track by $index">{{item[0]}}</li>
-			</ul>
 		</div>
-		<button type="button" class="btn btn-default btn-sm" ng-click="$ctrl.open()" btn-sm text-center" data-toggle="modal">to do</button>
-	</div>  <!-- close row -->
-</div>  <!-- close container -->
+			<div class="row">
+			<div class="col-md-4 maids">
+			<button type="button" class="btn btn-default btn-sm text-center" data-toggle="modal" data-target="#maidsModal">Enter Info</button>
+
+    <!-- input Modal -->
+    <div id="maidsModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Enter Information of Bridal Party Member</h4>
+          </div>
+          <div class="modal-body">
+          	<label class="control-label" for="maidname">Maid Name</label>
+            <input type="text" id="maidname" name="maidname" placeholder="" class="form-control">
+            <p class="help-block">Enter first and last name</p>
+            <br>
+            <label class="control-label" for="maidtitle">Maid Title</label>
+            <input type="text" id="maidtitle" name="maidtitle" placeholder="" class="form-control">
+            <p class="help-block">Maid of Honor, Brideamaid, etc.</p>
+            <br>
+            <label class="control-label" for="maidimg">Maid Photo</label>
+            <input type="file" id="maidimg" name="maidimg" placeholder="" class="form-control">
+            <p class="help-block">upload an image</p>
+            <br>
+          </div>
+          <div class="modal-footer">
+          	<button type="submit" class="btn btn-default submit" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Quit</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>  <!-- close Modal -->
+    </div>
+    </div>
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12 calendar">
+		<div class="col-md-8 calendar">
 			<h2>Calendar</h2>
 			<div>
 			<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffccff&amp;src=shirlette.chambers%40gmail.com&amp;color=%232952A3&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
 			</div>
 		</div>
+
+		<div class="col-md-4 tasks ">
+			<h2>To Do</h2>
+			<table class="table-striped">
+			<thead>
+				<tr>
+					<th>Task Title</th>
+					<th>Who</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="toDo in task track by $index">
+					<td><a ng-click="removeTask($index)">{{toDo.title}}</a></td>
+					<td>{{toDo.who}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" class="btn btn-default btn-sm text-center" ng-click="add = !add">Add task</button>
+		</div>
+	
+          <div ng-show="add">
+            <h4 class="modal-title" id="myModalLabel">Enter task for you or the Bridal Party Member</h4>
+          <form class="newTodo" ng-submit="addTask()">
+          <div class="modal-body">
+          	<label class="control-label" for="task">Task</label>
+            <input ng-model="newTask.title" type="text" id="task" name="task" placeholder="" class="form-control">
+            <br>
+            <label class="control-label" for="maidtitle">who?</label>
+            <input ng-model="newTask.who" type="text" id="taskwho" name="taskwho" placeholder="" class="form-control">
+            <p class="help-block">Who needs to complete this task?</p>
+            <br>
+          </div>
+          <div class="modal-footer">
+          	<button type="submit" class="btn btn-default submit" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Quit</button>
+          </div>
+          </form>
+        </div>
+	</div>  <!-- close tasks -->
+</div>
 	</div>
 </div>  <!-- close container -->
-
-
 
 
 <script>
