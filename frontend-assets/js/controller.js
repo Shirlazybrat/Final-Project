@@ -34,17 +34,6 @@ finalProject.config(function($routeProvider){
 finalProject.controller('mainController', function($scope, $http){
 	var apiPath = "http://localhost:8000/";
 	
-// var ref = new Firebase("https://www.gstatic.com/firebasejs/3.5.2/firebase.js")
-// var fb = $firebase(ref);
-// // Initialize Firebase
-//   var config = {
-//     apiKey: "AIzaSyDqoOSZyaaPB7V67mSqWbKnu-ILTLQje6w",
-//     authDomain: "bridesmaidal.firebaseapp.com",
-//     databaseURL: "https://bridesmaidal.firebaseio.com",
-//     storageBucket: "bridesmaidal.appspot.com",
-//     messagingSenderId: "1006473603582"
-//   };
-//   firebase.initializeApp(config);
 
 	$scope.register = function(){
 	 	console.log($scope.username);
@@ -81,7 +70,35 @@ $scope.login = function(){
 	 	// 	console.log(response);
 	 	// });
 	 };
-$scope.show = false;
+
+$scope.addHer = false;
+
+$scope.party = [
+		{
+			img: "toast.jpeg",
+			name: "Test1",
+			title: "Donna"
+		},
+		{
+			img: "shoesOff.jpeg",
+			name: "Test2",
+			title: "Tam"
+		} 
+	];
+
+	console.log($scope.task);
+
+	$scope.removeTask = function(){
+		$scope.party.splice(index,1);
+	}
+
+	$scope.addMaid = function(){
+		$scope.party.push($scope.newMaid);
+		$scope.newMaid = {};
+		$scope.addHer = false;
+		console.log($scope.party);
+	}
+
 $scope.task = [
 		{
 			title: "Test1",
@@ -102,6 +119,7 @@ $scope.task = [
 	$scope.addTask = function(){
 		$scope.task.push($scope.newTask);
 		$scope.newTask = {};
+		$scope.add = false;
 		console.log($scope.newTask);
 	}
 

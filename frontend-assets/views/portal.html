@@ -10,36 +10,33 @@
 	
 		<div class="col-md-4 maids">
 		<h2>Bridal Party</h2>
+		<button type="button" class="btn btn-default btn-sm text-center" ng-click="addHer = !addHer">Enter Info</button>
 			<ul class="list-group">
-				<li ng-repeat="maid in maids track by $index" class="list-group-item clearfix">
-					<div><img src="#" alt="..."></div>
+				<li ng-repeat="maid in party track by $index" class="list-group-item clearfix">
+					<div><img src="../frontend-assets/img/{{maid.img}}" alt="..."></div>
 					<div><h4>{{maid.name}}</h4></div>
-					<div><p>{{maid.status}}</p></div>
+					<div><p>{{maid.title}}</p></div>
 				</li>
 			</ul>
 		</div>
-			<div class="row">
-			<div class="col-md-4 maids">
-			<button type="button" class="btn btn-default btn-sm text-center" data-toggle="modal" data-target="#maidsModal">Enter Info</button>
+			<!-- <div class="row">
+			<div class="col-md-4 maids"> -->
 
-    <!-- input Modal -->
-    <div id="maidsModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Enter Information of Bridal Party Member</h4>
-          </div>
+    <!-- input -->
+    <div ng-show="addHer">
+            <h4 id="myModalLabel">Enter Information of Bridal Party Member</h4>
+          <form class="newMaid" ng-submit="addMaid()">
           <div class="modal-body">
-          	<label class="control-label" for="maidname">Maid Name</label>
-            <input type="text" id="maidname" name="maidname" placeholder="" class="form-control">
+          	<label class="control-label" for="task">Maid Name</label>
+            <input ng-model="newMaid.name" type="text" id="maidName" name="maidName" placeholder="" class="form-control">
             <p class="help-block">Enter first and last name</p>
             <br>
-            <label class="control-label" for="maidtitle">Maid Title</label>
-            <input type="text" id="maidtitle" name="maidtitle" placeholder="" class="form-control">
+            <label class="control-label" for="maidTitle">Maid Title</label>
+            <input ng-model="newMaid.title" type="text" id="title" name="title" placeholder="" class="form-control">
             <p class="help-block">Maid of Honor, Brideamaid, etc.</p>
             <br>
             <label class="control-label" for="maidimg">Maid Photo</label>
-            <input type="file" id="maidimg" name="maidimg" placeholder="" class="form-control">
+            <input ng-model="newMaid.img" type="file" id="maidimg" name="maidimg" placeholder="" class="form-control">
             <p class="help-block">upload an image</p>
             <br>
           </div>
@@ -47,8 +44,8 @@
           	<button type="submit" class="btn btn-default submit" data-dismiss="modal">Submit</button>
             <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Quit</button>
           </div>
+          </form>
         </div>
-      </div>
       </div>
     </div>  <!-- close Modal -->
     </div>

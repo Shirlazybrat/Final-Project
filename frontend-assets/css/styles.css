@@ -224,44 +224,50 @@ body span {
   margin-top: 0px;
 }
 
-/* line 240, ../compass/sass/styles.scss */
+/* line 241, ../compass/sass/styles.scss */
+.maids img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* line 248, ../compass/sass/styles.scss */
 section {
   margin: 30px 0px 30px 0px;
 }
 
-/* line 244, ../compass/sass/styles.scss */
+/* line 252, ../compass/sass/styles.scss */
 thead {
   font-size: 20px;
 }
 
-/* line 248, ../compass/sass/styles.scss */
+/* line 256, ../compass/sass/styles.scss */
 tbody, thead {
   margin: 20px;
 }
 
-/* line 252, ../compass/sass/styles.scss */
+/* line 260, ../compass/sass/styles.scss */
 th, td {
   padding: 20px;
 }
 
-/* line 256, ../compass/sass/styles.scss */
+/* line 264, ../compass/sass/styles.scss */
 table {
   margin: auto;
 }
 
-/* line 261, ../compass/sass/styles.scss */
+/* line 269, ../compass/sass/styles.scss */
 footer {
   background-color: #c8a693;
   padding: 10px;
   margin-top: 0px;
 }
 
-/* line 268, ../compass/sass/styles.scss */
+/* line 276, ../compass/sass/styles.scss */
 label {
   font-family: 'Handlee', cursive;
 }
 
-/* line 272, ../compass/sass/styles.scss */
+/* line 280, ../compass/sass/styles.scss */
 .login, .register {
   background-color: white;
   width: 500px;
@@ -272,19 +278,19 @@ label {
   padding-top: 10px;
 }
 
-/* line 281, ../compass/sass/styles.scss */
+/* line 289, ../compass/sass/styles.scss */
 .loginheading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* line 285, ../compass/sass/styles.scss */
+/* line 293, ../compass/sass/styles.scss */
 .loginbottomtext {
   text-align: center;
   margin-top: 20px;
 }
 
-/* line 289, ../compass/sass/styles.scss */
+/* line 297, ../compass/sass/styles.scss */
 .pagecontainer {
   margin-top: 30px;
   background-color: white;
@@ -293,7 +299,7 @@ label {
   margin-right: 20px;
 }
 
-/* line 297, ../compass/sass/styles.scss */
+/* line 305, ../compass/sass/styles.scss */
 .pageheader {
   width: 100%;
   height: 60px;
@@ -302,7 +308,7 @@ label {
   padding: 0;
 }
 
-/* line 304, ../compass/sass/styles.scss */
+/* line 312, ../compass/sass/styles.scss */
 .menubutton {
   color: white;
   background-color: #ff6800;
@@ -311,18 +317,18 @@ label {
   margin-top: 10px;
 }
 
-/* line 311, ../compass/sass/styles.scss */
+/* line 319, ../compass/sass/styles.scss */
 .pagetitle {
   color: white;
   margin: 10px;
 }
 
-/* line 315, ../compass/sass/styles.scss */
+/* line 323, ../compass/sass/styles.scss */
 .contentheight {
   height: 300px;
 }
 
-/* line 322, ../compass/sass/styles.scss */
+/* line 330, ../compass/sass/styles.scss */
 .thumbnailOption img {
   padding: 5px;
   width: 250px;
@@ -333,25 +339,25 @@ label {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 338, ../compass/sass/styles.scss */
+  /* line 346, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
-  /* line 340, ../compass/sass/styles.scss */
+  /* line 348, ../compass/sass/styles.scss */
   section img.profileImg {
     max-height: 425px;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  /* line 348, ../compass/sass/styles.scss */
+  /* line 356, ../compass/sass/styles.scss */
   section {
     width: 100%;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  /* line 355, ../compass/sass/styles.scss */
+  /* line 363, ../compass/sass/styles.scss */
   section {
     width: 100%;
     float: none;
