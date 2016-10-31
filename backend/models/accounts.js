@@ -6,6 +6,7 @@ var Account = new Schema ({
 	password: {type: String, required: true},
 	email: {type: String, required: true},
 	token: String,
+	calendarId: String,
 	name: String,
 	wed_date: String,
 	location: String,

@@ -41,6 +41,7 @@ body {
 	}
 	p{
 		font-family: 'Handlee', cursive;
+		font-size: 15px;
 	}
 	span{
 		font-size: 1.5em;
@@ -98,10 +99,6 @@ body {
 
 .features {
 	margin-top: 50px;
-	img {
-		// height: 400px;
-		width: 200%;
-		}
 	.hovereffect {
 	  width: 112%;
 	  height: 100%;
@@ -110,6 +107,10 @@ body {
 	  position: relative;
 	  text-align: center;
 	  cursor: default;
+	  img {
+		// height: 400px;
+		width: 200%;
+		}
 	}
 
 	.hovereffect .overlay {
@@ -137,13 +138,22 @@ body {
 	  transform: scale(1.2);
 	}
 
-	.hovereffect h2 {
+	.hovereffect h2{
 	  text-transform: uppercase;
 	  text-align: center;
 	  position: relative;
-	  font-size: 17px;
+	  font-size: 20px;
 	  padding: 10px;
 	  background: rgba(0, 0, 0, 0.6);
+	}
+
+	.hovereffect p {
+		text-transform: uppercase;
+	  text-align: center;
+	  position: relative;
+	  font-size: 10px;
+	  padding: 10px;
+	  background: rgba(0, 0, 0, 0.6)
 	}
 
 	.hovereffect a.info {
@@ -160,7 +170,7 @@ body {
 	  width: 420px;
 	}
 
-	.hovereffect a.info, .hovereffect h2 {
+	.hovereffect a.info, .hovereffect h2, .hovereffect p {
 	  -webkit-transform: scale(0.7);
 	  -ms-transform: scale(0.7);
 	  transform: scale(0.7);
@@ -172,7 +182,7 @@ body {
 	  text-transform: uppercase;
 	}
 
-	.hovereffect:hover a.info, .hovereffect:hover h2 {
+	.hovereffect:hover a.info, .hovereffect:hover h2, .hovereffect:hover p {
 	  opacity: 1;
 	  filter: alpha(opacity=100);
 	  -webkit-transform: scale(1);
