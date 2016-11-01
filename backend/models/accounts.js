@@ -17,6 +17,7 @@ var Account = new Schema ({
 		total: Number,
 		date: Number
 		}
+
 	});
 
 module.exports = mongoose.model('Account', Account);

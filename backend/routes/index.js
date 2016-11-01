@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-// var mongoUrl = "mongodb://127.0.0.1:27017/final";
-// mongoose.connect(mongoUrl);
+var mongoUrl = "mongodb://127.0.0.1:27017/final";
+mongoose.connect(mongoUrl);
 var Account = require('../models/accounts');
 var randToken = require('rand-token'),uid;
 
@@ -28,7 +28,7 @@ router.post('/register_user', function(req,res,next){
 		// 	}
 		// 	else {
 
-	if (req.body.password != req.body.password2){
+	if (req.body.password != req.body.password_confirm){
 		res.json({
 			message: "passmatch"
 		});
@@ -64,6 +64,23 @@ router.post('/register_user', function(req,res,next){
 //@ post('/register'), do aAccount.find({username: req.body.username}).
 //If the result is not null, res.json({failure: 'usernameTaken'), })
 });
+
+router.post('/createCalendar', function(req,res,next){
+	Account.update(
+		{token: req.body.token},
+		 {calendarId: req.body.calendarID},
+		 function(error, document){
+		 	if (error){
+				//no match
+				res.json({failure: error});
+			}else{
+				res.json({
+					success: "calendar added"
+				});
+			}
+		 });
+})
+
 
 router.post('/login', function(req,res,next){
 	Account.findOne(
@@ -102,7 +119,7 @@ router.post('/login', function(req,res,next){
 // --$cookies.put('token', '');
 // -- $cookies.remove('token');
 
-router.get('/getUserData', function(req,res,next){
+router.get('/getCalendarID', function(req,res,next){
 	var userToken = req.query.token; // the XXX in ?token=[XXX]
 	if(userToken == undefined){
 		//no token was supplied
@@ -120,6 +137,7 @@ router.get('/getUserData', function(req,res,next){
 					res.json({
 						username: document.username,
 						email: document.email,
+						calendarID: document.calendarID
 					});
 				}
 			}
