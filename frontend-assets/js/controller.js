@@ -32,12 +32,54 @@ finalProject.config(function($routeProvider){
 /////////////////////////////////////////////////////////////
 
 finalProject.controller('mainController', function($scope, $http, $sce, $location, $cookies){
-	var apiPath = "http://localhost:8000/";
+	var apiPath = "http://localhost:8000";
 	
 	var CLIENT_ID = '357508717792-rnb52hc4im3835bdf2cpt4najunjeam3.apps.googleusercontent.com';
 
     var SCOPES = ["https://www.googleapis.com/auth/calendar"];
     var insertCal = ["https://www.googleapis.com/calendar/v3/calendars.insert"];
+
+    $scope.register = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/register_user', {
+	 		username: $scope.username,
+	 		name: $scope.name,
+	 		password: $scope.password,
+	 		password_confirm: $scope.password_confirm,
+	 		email: $scope.email,
+	 		wed_date: $scope.wed_date,
+	 		location: $scope.location,
+	 		budget: $scope.budget 
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.message == 'added'){
+	 			$location.path('/options');
+	 			$cookies.put('token', response.data.token);
+	 			$cookies.put('username', $scope.username);
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+
+$scope.username = $scope.register();
+
+$scope.login = function(){
+	 	console.log($scope.username);
+	 	$http.post(apiPath + '/login', {
+	 		username: $scope.username,
+	 		password: $scope.password
+	 	}).then(function successCallback(response){
+	 		console.log(response);
+	 		if(response.data.success == 'userFound'){
+	 			$location.path('/options');
+	 			$cookies.put('username', $scope.username);
+	 		}
+	 	}, function errorCallback(response){
+	 		console.log(response);
+	 	});
+	 };
+
 
 
     // **
@@ -91,27 +133,30 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
       function loadCalendarApi() {
         gapi.client.load('calendar', 'v3', listUpcomingEvents);
         console.log(gapi.client);
-        gapi.client.load('calendar.calendars', 'v3', calendar);
-        
+        gapi.client.load('calendar.calendars', 'v3', calendar); 
       }
 
       function calendar(){
       	var request = gapi.client.calendar.calendars.insert({
           	"resource" :
-     		{"summary": "Tshirl",
+     		{"summary": "Tshirl",//fix this so that it can be entered from user
      		"description": "test",
      		"timezone" : "xxxx"}
          });
       	request.execute(function(resp) {
           var events = resp.items;
-          console.log(resp);
+          console.log(resp.id);
 		});
+		return resp;
 	}
 
 	// $scope.resp = calendar();
+	// console.log(resp);
 
+	var calendarID = "bu10m6dl0ppkaq50eksuoe7e9o@group.calendar.google.com";
 	$scope.calendarID = $sce.trustAsResourceUrl('https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffccff&amp;' +calendarID+'&amp;color=%23691426&amp;ctz=America%2FNew_York" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"');
 
+//
       /**
        * Print the summary and start datetime/date of the next ten events in
        * the authorized user's calendar. If no events are found an
@@ -130,6 +175,9 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
         request.execute(function(resp) {
           var events = resp.items;
           console.log(events);
+          for (i = 0; i < resp.length; i++) {
+          console.log(resp[i]);
+      }
           // appendPre('Upcoming events:');
 
           // if (events.length > 0) {
@@ -161,49 +209,6 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
       }
 
  // handleAuthClick(event);
-
-
-	$scope.register = function(){
-	 	console.log($scope.username);
-	 	$http.post(apiPath + '/register', {
-	 		username: $scope.username,
-	 		name: $scope.name,
-	 		password: $scope.password,
-	 		password_confirm: $scope.password_confirm,
-	 		email: $scope.email,
-	 		wed_date: $scope.wed_date,
-	 		location: $scope.location,
-	 		budget: $scope.budget 
-	 	}).then(function successCallback(response){
-	 		console.log(response);
-	 		if(response.data.message == 'added'){
-	 			$location.path('/options');
-	 			$cookies.put('token', response.data.token);
-	 			$cookies.put('username', $scope.username);
-	 		}
-	 	}, function errorCallback(response){
-	 		console.log(response);
-	 	});
-	 };
-
-$scope.username = $scope.register();
-
-$scope.login = function(){
-	 	console.log($scope.username);
-	 	$http.post(apiPath + '/login', {
-	 		username: $scope.username,
-	 		password: $scope.password
-	 	}).then(function successCallback(response){
-	 		console.log(response);
-	 		if(response.data.success == 'userFound'){
-	 			$location.path('/options');
-	 			$cookies.put('username', $scope.username);
-	 		}
-	 	}, function errorCallback(response){
-	 		console.log(response);
-	 	});
-	 };
-
 
 $scope.addHer = false;
 

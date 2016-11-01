@@ -7,18 +7,12 @@
 		<h3>Budget: {{budget}}</h3>
 		<h3>etc: {{more}}</h3>
 		</div>
-
-		<div id="authorize-div">
-      <span>Authorize access to Google Calendar API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" ng-click="handleAuthClick()">
-        Authorize
-      </button>
-    </div>
 	
 		<div class="col-md-4 maids">
 		<h2>Bridal Party</h2>
 		<button type="button" class="btn btn-default btn-sm text-center" ng-click="addHer = !addHer">Enter Info</button>
+
+
 			<ul class="list-group">
 				<li ng-repeat="maid in party track by $index" class="list-group-item clearfix">
 					<div><img src="../frontend-assets/img/{{maid.img}}" alt="..."></div>
@@ -26,9 +20,6 @@
 					<div><p>{{maid.title}}</p></div>
 				</li>
 			</ul>
-		</div>
-			<!-- <div class="row">
-			<div class="col-md-4 maids"> -->
 
     <!-- input -->
     <div ng-show="addHer">
@@ -55,20 +46,30 @@
           </form>
         </div>
       </div>
-    </div>  <!-- close Modal -->
     </div>
-    </div>
-
+  </div> 
+  
 <div class="container-fluid">
+<div id="authorize-div">
+  <span>Authorize access to Google Calendar API</span>
+  <!--Button for the user to click to initiate auth sequence -->
+  <button id="authorize-button" ng-click="handleAuthClick()">
+    Authorize
+  </button>
+</div>
+
 	<div class="row">
 		<div class="col-md-8 calendar">
 			<h2>Calendar</h2>
 			<div>
+      <button id="authorize-button" ng-click="loadCalendarApi()">
+    Create New Calendar
+  </button>
 			<iframe ng-src="{{calendarID}}"></iframe>
 			</div>
 		</div>
 
-		<div class="col-md-4 tasks ">
+		<div class="col-md-4 tasks">
 			<h2>To Do</h2>
 			<table class="table-striped">
 			<thead>
@@ -85,7 +86,6 @@
 			</tbody>
 		</table>
 		<button type="button" class="btn btn-default btn-sm text-center" ng-click="add = !add">Add task</button>
-		</div>
 	
           <div ng-show="add">
             <h4 class="modal-title" id="myModalLabel">Enter task for you or the Bridal Party Member</h4>
@@ -108,7 +108,6 @@
 			</div>  <!-- close tasks -->
 		</div>
 	</div>
-</div>  <!-- close container -->
 
 
 <script>

@@ -189,8 +189,8 @@ body span {
 
 /* line 195, ../compass/sass/styles.scss */
 .split img {
-  height: 400px;
-  width: 600px;
+  height: 100%;
+  width: 160%;
 }
 
 /* line 202, ../compass/sass/styles.scss */

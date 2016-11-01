@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var mongoUrl = "mongodb://127.0.0.1:27017/final";
-mongoose.connect(mongoUrl);
+// var mongoUrl = "mongodb://127.0.0.1:27017/final";
+// mongoose.connect(mongoUrl);
 var Account = require('../models/accounts');
 var randToken = require('rand-token'),uid;
 
 //this is our config module we have access to
 //configVars.secretTestKey
-var configVars = require('../config/config'); 
+// var configVars = require('../config/config'); 
 
 //include bcrypt
 var bcrypt = require('bcrypt-nodejs');
@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/register', function(req,res,next){
+router.post('/register_user', function(req,res,next){
 //to check if the username is already used...
 		// {username: req.body.username}, //This is the droid we're looking for
 		// function(error, document){
