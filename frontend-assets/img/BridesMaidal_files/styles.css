@@ -1,0 +1,377 @@
+/* Coolors Exported Palette - coolors.co/f26c99-d81752-b4843a-c8a693-b1b3b5 */
+/* HSL */
+/* RGB */
+/* line 20, ../compass/sass/styles.scss */
+body {
+  background-color: #FFF;
+  color: #d81752;
+  text-align: center;
+  margin: 0px;
+  position: relative;
+}
+/* line 26, ../compass/sass/styles.scss */
+body h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 200px;
+}
+/* line 31, ../compass/sass/styles.scss */
+body h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+}
+/* line 35, ../compass/sass/styles.scss */
+body h3 {
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+}
+/* line 39, ../compass/sass/styles.scss */
+body h4 {
+  font-family: 'Handlee', cursive;
+}
+/* line 42, ../compass/sass/styles.scss */
+body p {
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+}
+/* line 46, ../compass/sass/styles.scss */
+body span {
+  font-size: 1.5em;
+}
+
+/*font-family: 'Unkempt', cursive;  (extra front style)*/
+/* line 53, ../compass/sass/styles.scss */
+.jumbotron {
+  background-image: url("../img/banner.png");
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-position: 0% 0%;
+  background-size: cover;
+  height: 500px;
+  background-repeat: no-repeat;
+  color: #d81752;
+}
+
+/* line 65, ../compass/sass/styles.scss */
+.jumbotron p {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: 200;
+}
+
+/* line 71, ../compass/sass/styles.scss */
+#nav {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent), url("../img/gold.jpg");
+  height: 55px;
+  width: 100%;
+}
+/* line 76, ../compass/sass/styles.scss */
+#nav .navbar .container {
+  background-color: #b4843a;
+  opacity: 0.7;
+}
+/* line 79, ../compass/sass/styles.scss */
+#nav .navbar .container li a {
+  color: #d81752;
+  opacity: 1;
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+}
+/* line 87, ../compass/sass/styles.scss */
+#nav a.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-color: #d81752;
+  font-size: 30px;
+}
+/* line 92, ../compass/sass/styles.scss */
+#nav .affix {
+  position: fixed;
+  top: 0;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+
+/* line 100, ../compass/sass/styles.scss */
+.features {
+  margin-top: 50px;
+}
+/* line 102, ../compass/sass/styles.scss */
+.features .hovereffect {
+  width: 112%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+/* line 110, ../compass/sass/styles.scss */
+.features .hovereffect img {
+  width: 200%;
+}
+/* line 116, ../compass/sass/styles.scss */
+.features .hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+/* line 125, ../compass/sass/styles.scss */
+.features .hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+/* line 132, ../compass/sass/styles.scss */
+.features .hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/* line 141, ../compass/sass/styles.scss */
+.features .hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 150, ../compass/sass/styles.scss */
+.features .hovereffect p {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 159, ../compass/sass/styles.scss */
+.features .hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+}
+/* line 168, ../compass/sass/styles.scss */
+.features .hovereffect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+  width: 420px;
+}
+/* line 173, ../compass/sass/styles.scss */
+.features .hovereffect a.info, .features .hovereffect h2, .features .hovereffect p {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+/* line 185, ../compass/sass/styles.scss */
+.features .hovereffect:hover a.info, .features .hovereffect:hover h2, .features .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 195, ../compass/sass/styles.scss */
+.split img {
+  height: 100%;
+  width: 160%;
+}
+
+/* line 202, ../compass/sass/styles.scss */
+.founder img {
+  height: 300px;
+  width: 200px;
+  border-radius: 100%;
+}
+
+/* line 209, ../compass/sass/styles.scss */
+.section-divider {
+  z-index: 999;
+  width: 100%;
+  display: table;
+  max-height: 250px;
+  border-bottom: 2px solid #E6EAED;
+  box-sizing: border-box;
+  margin-top: 45px;
+  background-position: center center;
+  background-size: 100%;
+  background-size: cover;
+  background-attachment: relative;
+  text-align: center;
+}
+/* line 232, ../compass/sass/styles.scss */
+.section-divider .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 240, ../compass/sass/styles.scss */
+.divider1 {
+  background-image: url(../img/feet.jpg);
+  margin-top: 0px;
+}
+
+/* line 246, ../compass/sass/styles.scss */
+.divider2 {
+  background-image: url(../img/treeblossom.jpg);
+  margin-top: 0px;
+}
+
+/* line 252, ../compass/sass/styles.scss */
+.maids img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+/* line 260, ../compass/sass/styles.scss */
+section {
+  margin: 30px 0px 30px 0px;
+}
+
+/* line 264, ../compass/sass/styles.scss */
+thead {
+  font-size: 20px;
+}
+
+/* line 268, ../compass/sass/styles.scss */
+tbody, thead {
+  margin: 20px;
+}
+
+/* line 272, ../compass/sass/styles.scss */
+th, td {
+  padding: 20px;
+}
+
+/* line 276, ../compass/sass/styles.scss */
+table {
+  margin: auto;
+}
+
+/* line 281, ../compass/sass/styles.scss */
+footer {
+  background-color: #c8a693;
+  padding: 10px;
+  margin-top: 0px;
+}
+
+/* line 288, ../compass/sass/styles.scss */
+label {
+  font-family: 'Handlee', cursive;
+}
+
+/* line 292, ../compass/sass/styles.scss */
+.login, .register {
+  background-color: white;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 5%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+/* line 301, ../compass/sass/styles.scss */
+.loginheading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* line 305, ../compass/sass/styles.scss */
+.loginbottomtext {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* line 309, ../compass/sass/styles.scss */
+.pagecontainer {
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 317, ../compass/sass/styles.scss */
+.pageheader {
+  width: 100%;
+  height: 60px;
+  background-color: #ff6800;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 324, ../compass/sass/styles.scss */
+.menubutton {
+  color: white;
+  background-color: #ff6800;
+  border: 0px solid transparent;
+  font-size: 20pt;
+  margin-top: 10px;
+}
+
+/* line 331, ../compass/sass/styles.scss */
+.pagetitle {
+  color: white;
+  margin: 10px;
+}
+
+/* line 335, ../compass/sass/styles.scss */
+.contentheight {
+  height: 300px;
+}
+
+/* line 342, ../compass/sass/styles.scss */
+.thumbnailOption img {
+  padding: 5px;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 358, ../compass/sass/styles.scss */
+  section {
+    width: 100%;
+  }
+  /* line 360, ../compass/sass/styles.scss */
+  section img.profileImg {
+    max-height: 425px;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  /* line 368, ../compass/sass/styles.scss */
+  section {
+    width: 100%;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  /* line 375, ../compass/sass/styles.scss */
+  section {
+    width: 100%;
+    float: none;
+  }
+}

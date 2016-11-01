@@ -174,10 +174,9 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 function errorCallback(response) {
                     console.log(response);
                 }
-
                 
-            $scope.addEvent = function(){
-            var event = {
+                $scope.addEvent = function(){
+                	var event = {
 					  'summary': $scope.summary,
 					  'location': $scope.location,
 					  'description': $scope.description,
@@ -195,7 +194,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
 					};
 				gapi.client.load('calendar', 'v3', function() {
 				var request = gapi.client.calendar.events.insert({
-				  'calendarId': '',
+				  'calendarId': 'primary',
 				  'resource': event
 				});
 

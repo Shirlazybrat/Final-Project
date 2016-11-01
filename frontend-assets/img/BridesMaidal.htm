@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:8000/?#/portal -->
+<html ng-app="finalProject" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+	
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+    <!-- <link rel="icon" href="docs/favicon.ico"> -->
+   <title>BridesMaidal</title>
+  <link rel="stylesheet" href="./BridesMaidal_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- JS -->
+  <script src="./BridesMaidal_files/cb=gapi.loaded_0" async=""></script><script src="./BridesMaidal_files/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+  <script src="./BridesMaidal_files/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Angular -->
+	<script src="./BridesMaidal_files/angular.min.js" type="text/javascript"></script>
+  <script src="./BridesMaidal_files/angular-route.min.js"></script>
+  <script src="./BridesMaidal_files/angular-cookies.min.js"></script>
+  <script src="./BridesMaidal_files/angular-animate.min.js"></script>
+  <script src="./BridesMaidal_files/angular-touch.min.js"></script>
+	<script src="./BridesMaidal_files/controller.js" type="text/javascript"></script>
+	<script src="./BridesMaidal_files/client.js" gapi_processed="true">
+    </script>
+    <!-- Bootstrap Core CSS -->
+  <link href="./BridesMaidal_files/bootstrap.min(1).css" rel="stylesheet">
+    <!-- fonts -->
+  <link href="./BridesMaidal_files/css" rel="stylesheet">
+  <link rel="stylesheet" href="./BridesMaidal_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./BridesMaidal_files/styles.css" type="text/css" media="screen">
+
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body ng-controller="mainController" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="coverPg ng-scope" cz-shortcut-listen="true">
+
+<header class="jumbotron"></header>
+
+<!-- Begin Navbar -->
+<div id="nav" class="navbar-fixed-top">
+  <div class="navbar navbar-static-top">
+    <div class="container">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a href="http://localhost:8000/?#home" class="navbar-brand">Home</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="http://localhost:8000/?#">Bride</a></li>
+          <li><a href="http://localhost:8000/?#">Bridesmaids</a></li>
+        </ul>
+        <ul class="nav pull-right navbar-nav">
+          <li><a href="http://localhost:8000/?#login">Login</a></li>
+          <li><a href="http://localhost:8000/?#register">Register</a></li>
+          <li>
+            <a href="http://localhost:8000/?#"><span class="badge">#</span></a>
+          </li>
+        </ul>
+      </div>		
+    </div>
+  </div><!-- /.navbar -->
+</div>
+
+<h1 id="fire"></h1>
+
+<!-- ngView: --><div id="views" ng-view="" class="ng-scope"><div class="container-fluid ng-scope">
+	<div class="row">
+		<div class="col-md-8">
+		<h2>Wedding Details</h2>
+		<h3 class="ng-binding">Date: </h3>
+		<h3 class="ng-binding">Location: ganblskjbrg;kwjrnf4</h3>
+		<h3 class="ng-binding">Budget: </h3>
+		<h3 class="ng-binding">etc: </h3>
+		</div>
+	<!-- ////////////////////////////////////// -->
+		<div class="col-md-4 maids">
+		<h2>Bridal Party</h2>
+		<button type="button" class="btn btn-default btn-sm text-center" ng-click="addHer = !addHer">Enter Info</button>
+
+
+			<ul class="list-group">
+				<!-- ngRepeat: maid in party track by $index --><li ng-repeat="maid in party track by $index" class="list-group-item clearfix ng-scope">
+					<div><img src="./BridesMaidal_files/donna.jpg" alt="..."></div>
+					<div><h4 class="ng-binding">Test1</h4></div>
+					<div><p class="ng-binding">Donna</p></div>
+				</li><!-- end ngRepeat: maid in party track by $index --><li ng-repeat="maid in party track by $index" class="list-group-item clearfix ng-scope">
+					<div><img src="./BridesMaidal_files/tam.jpg" alt="..."></div>
+					<div><h4 class="ng-binding">Test2</h4></div>
+					<div><p class="ng-binding">Tam</p></div>
+				</li><!-- end ngRepeat: maid in party track by $index -->
+			</ul>
+
+    <!-- input -->
+    <div ng-show="addHer" class="ng-hide">
+            <h4 id="myModalLabel">Enter Information of Bridal Party Member</h4>
+          <form class="newMaid ng-pristine ng-valid" ng-submit="addMaid()">
+          <div class="modal-body">
+          	<label class="control-label" for="task">Maid Name</label>
+            <input ng-model="newMaid.name" type="text" id="maidName" name="maidName" placeholder="" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+            <p class="help-block">Enter first and last name</p>
+            <br>
+            <label class="control-label" for="maidTitle">Maid Title</label>
+            <input ng-model="newMaid.title" type="text" id="title" name="title" placeholder="" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+            <p class="help-block">Maid of Honor, Brideamaid, etc.</p>
+            <br>
+            <label class="control-label" for="maidimg">Maid Photo</label>
+            <input ng-model="newMaid.img" type="file" id="maidimg" name="maidimg" placeholder="" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+            <p class="help-block">upload an image</p>
+            <br>
+          </div>
+          <div class="modal-footer">
+          	<button type="submit" class="btn btn-default submit" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Quit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> 
+<!-- ////////////////////////////////////////// -->
+
+	<div class="row ng-scope">
+		<div class="col-md-10 calendar">
+			<h2>Calendar</h2>
+      <button id="authorize-button" ng-click="loadCalendarApi()">
+    Create New Calendar
+    </button>
+    <div id="authorize-div" style="display: none;">
+  <p>Authorize access to Google Calendar API</p>
+  <!--Button for the user to click to initiate auth sequence -->
+  <button id="authorize-button" ng-click="handleAuthClick()">
+    Authorize
+  </button>
+</div>
+			<div class="col-md-6">
+			<iframe ng-src="https://calendar.google.com/calendar/embed?height=600&amp;amp;wkst=1&amp;amp;bgcolor=%23ffccff&amp;amp;undefined&amp;amp;color=%23691426&amp;amp;ctz=America%2FNew_York" style="border: 0" width="1000" height="800" frameborder="0" scrolling="no" src="./BridesMaidal_files/embed.html"></iframe>
+      </div>
+      <div class="col-md-4 col-md-offset-2">
+      <form class="newEvent ng-dirty ng-valid-parse ng-valid-date ng-valid ng-valid-email ng-submitted" ng-submit="addEvent()">
+          <div class="modal-body">
+            <label class="control-label" for="summary">Event Name</label>
+            <input ng-model="summary" type="text" id="summary" name="summary" placeholder="" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched">
+            <p class="help-block">Enter the name or summary of the event</p>
+            <br>
+            <label class="control-label" for="eventLocation">Location</label>
+            <input ng-model="location" type="text" id="location" name="location" placeholder="" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched">
+            <p class="help-block">Where is the event being help</p>
+            <br>
+            <label class="control-label" for="description">Description</label>
+            <input ng-model="description" type="text" id="description" name="description" placeholder="" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched">
+            <p class="help-block">Add a brief description of the event</p>
+            <br>
+            <label class="control-label" for="start">Start Time</label>
+            <input ng-model="start" type="date" id="start" name="start" placeholder="" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-date ng-touched">
+            <p class="help-block">Enter the beginning date and time of event</p>
+            <br>
+            <label class="control-label" for="end">End Time</label>
+            <input ng-model="end" type="date" id="end" name="end" placeholder="" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-date ng-touched">
+            <p class="help-block">Enter the end date and time of event</p>
+            <br>
+            <label class="control-label" for="attendees">Attendees</label>
+            <input ng-model="attendees" type="email" id="attendees" name="attendees" placeholder="" class="form-control ng-not-empty ng-dirty ng-touched ng-valid ng-valid-email">
+            <p class="help-block">Invite people to the event using their email</p>
+            <br>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-default submit" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Quit</button>
+          </div>
+          </form>
+          </div>
+        </div>
+		</div>
+<!-- /////////////////////////////////////// -->
+  <div class="row ng-scope">
+		<div class="col-md-6 tasks">
+			<h2>To Do</h2>
+			<table class="table-striped">
+			<thead>
+				<tr>
+					<th>Task Title</th>
+					<th>Who</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- ngRepeat: toDo in task track by $index --><tr ng-repeat="toDo in task track by $index" class="ng-scope">
+					<td><a ng-click="removeTask($index)" class="ng-binding">Test1</a></td>
+					<td class="ng-binding">Donna</td>
+				</tr><!-- end ngRepeat: toDo in task track by $index --><tr ng-repeat="toDo in task track by $index" class="ng-scope">
+					<td><a ng-click="removeTask($index)" class="ng-binding">Test2</a></td>
+					<td class="ng-binding">Tam</td>
+				</tr><!-- end ngRepeat: toDo in task track by $index -->
+			</tbody>
+		</table>
+		<button type="button" class="btn btn-default btn-sm text-center" ng-click="add = !add">Add task</button>
+	
+          <div ng-show="add" class="ng-hide">
+            <h4 class="modal-title" id="myModalLabel">Enter task for you or the Bridal Party Member</h4>
+          <form class="newTodo ng-pristine ng-valid" ng-submit="addTask()">
+          <div class="modal-body">
+          	<label class="control-label" for="task">Task</label>
+            <input ng-model="newTask.title" type="text" id="task" name="task" placeholder="" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+            <br>
+            <label class="control-label" for="maidtitle">who?</label>
+            <input ng-model="newTask.who" type="text" id="taskwho" name="taskwho" placeholder="" class="form-control ng-pristine ng-untouched ng-valid ng-empty">
+            <p class="help-block">Who needs to complete this task?</p>
+            <br>
+          </div>
+          <div class="modal-footer">
+          	<button type="submit" class="btn btn-default submit" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Quit</button>
+          </div>
+          </form>
+        </div>
+			</div>  <!-- close tasks -->
+		</div>
+	
+  
+
+
+<script class="ng-scope">
+	$(function(){
+    $('#myFormSubmit').click(function(e){
+      e.preventDefault();
+      alert($('#myField').val());
+      /*
+      $.post('http://path/to/post', 
+         $('#myForm').serialize(), 
+         function(data, status, xhr){
+           // do something here with response;
+         });
+      */
+    });
+});
+</script></div>
+
+	<!-- ///////////Section divider2/////////// -->
+<section class="section-divider divider2">
+    <div class="container-fluid">
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <hr>
+        <p>Apply a background image in css...Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, atque.</p>
+    </div>
+</section>
+<!-- ///////////End section divider2////////// -->
+
+	<footer class="text center">
+	    <p>Bridesmaidal | All Rights Reserved</p>
+	</footer>
+
+
+
+
+<script>
+	$(document).ready(function () {
+	    var navpos = $('#nav').offset();
+	    console.log(navpos.top);
+	    $(window).bind('scroll', function () {
+	        if ($(window).scrollTop() > navpos.top) {
+	            $('#nav').addClass('navbar-fixed-top');
+	        } 
+	        else {
+	            $('#nav').removeClass('navbar-fixed-top');
+	        }
+	    });
+	});
+</script>
+
+
+
+
+<iframe name="oauth2relay650481697" id="oauth2relay650481697" src="./BridesMaidal_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe id="apiproxy9a29980489d610ff84e7ecd3090b6cad605ffb590.8179871506853535" name="apiproxy9a29980489d610ff84e7ecd3090b6cad605ffb590.8179871506853535" src="./BridesMaidal_files/proxy.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>
