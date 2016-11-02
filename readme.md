@@ -1,6 +1,6 @@
 #Bridesmaidal
 
-##A wedding planning application created using the MEQAN stack
+##A wedding planning application created using the MEAN stack
 
 
 ![Alt text](frontend-assets/img/app1.png "Home Page")

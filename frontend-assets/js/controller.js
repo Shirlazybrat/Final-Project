@@ -34,7 +34,7 @@ finalProject.config(function($routeProvider) {
 finalProject.controller('mainController', function($scope, $http, $sce, $location, $cookies) {
             var apiPath = "http://localhost:3000";
 
-            var CLIENT_ID = '357508717792-rnb52hc4im3835bdf2cpt4najunjeam3.apps.googleusercontent.com';
+            var CLIENT_Id = '357508717792-rnb52hc4im3835bdf2cpt4najunjeam3.apps.googleusercontent.com';
 
             var SCOPES = ["https://www.googleapis.com/auth/calendar"];
             var insertCal = ["https://www.googleapis.com/calendar/v3/calendars.insert"];
@@ -53,7 +53,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 }).then(function successCallback(response) {
                     console.log(response);
                     if (response.data.message == 'added') {
-                        $location.path('/options');
+                        $location.path('/portal');
                         $cookies.put('token', response.data.token);
                         $cookies.put('username', $scope.username);
                     }
@@ -85,7 +85,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
             //    */
             function checkAuth() {
                 gapi.auth.authorize({
-                    'client_id': CLIENT_ID,
+                    'client_id': CLIENT_Id,
                     'scope': SCOPES.join(' '),
                     'immediate': true
                 }, handleAuthResult);
@@ -101,8 +101,15 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 if (authResult && !authResult.error) {
                     // Hide auth UI, then load client library.
                     authorizeDiv.style.display = 'none';
-                    loadCalendarApi();
-                    calendar();
+                    if ($cookies.get('calendarId')){
+                    	loadCalendarApi();
+                    	addEvent();
+                    }
+                    else{
+                    	loadCalendarApi();
+                    	calendar();
+                    }
+                    
                 } else {
                     // Show auth UI, allowing the user to initiate authorization by
                     // clicking authorize button.
@@ -116,7 +123,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
              * @param {Event} event Button click event.
              */
             $scope.handleAuthClick = function() {
-                gapi.auth.authorize({ client_id: CLIENT_ID, scope: SCOPES, immediate: false },
+                gapi.auth.authorize({ client_id: CLIENT_Id, scope: SCOPES, immediate: false },
                     handleAuthResult);
                 // console.log(event);
                 return false;
@@ -159,13 +166,15 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                         }
                 });
                 return resp.id;
-                // return calendarID;
+                // return calendarId;
             }
-            $scope.calendarID = calendar.resp;
+            $scope.calendarId = calendar.resp;
 
-            $http.get(apiPath + '/getCalendarID?token' + $cookies.get('token'))
+            $http.get(apiPath + '/getCalendarId?token=' + $cookies.get('token'))
                 .then(function successCallback(response) {
                     console.log(response);
+                    $cookies.put('calendarId', response.data.calendarID);
+                    console.log($cookies.get('calendarId'));
                     $scope.calendarID = $sce.trustAsResourceUrl('https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffccff&amp;' + response.data.calendarID + '&amp;color=%23691426&amp;ctz=America%2FNew_York');
 
                     if (response.data.message == 'added') {
@@ -178,7 +187,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 }
 
                 
-            $scope.addEvent = function(){
+            function addEvent() {
             var event = {
 					  'summary': $scope.summary,
 					  'location': $scope.location,
@@ -197,13 +206,13 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
 					};
 				gapi.client.load('calendar', 'v3', function() {
 				var request = gapi.client.calendar.events.insert({
-				  'calendarId': $scope.calendarID,
+				  'calendarId': $cookies.get('calendarId'),
 				  'resource': event
 				});
-
+				console.log($cookies.get('calendarId'));
 				request.execute(function(event) {
+					appendPre('Event created: ' + event.htmlLink);
 				  console.log(event);
-				  calendar();
 				});
                 })
             }
@@ -257,7 +266,8 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 function appendPre(message) {
                     var pre = document.getElementById('output');
                     var textContent = document.createTextNode(message + '\n');
-                    pre.appendChild(textContent);
+                    pre.appendChild
+(textContent);
                 }
 
                 // handleAuthClick(event);
@@ -274,7 +284,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                     title: "Matron of Honor"
                 }];
 
-                console.log($scope.task);
+                console.log($scope.party);
 
                 $scope.removeTask = function() {
                     $scope.party.splice(index, 1);
@@ -285,7 +295,18 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                     $scope.newMaid = {};
                     $scope.addHer = false;
                     console.log($scope.party);
-                }
+                    $http.post(apiPath + '/addMaidMember', {
+                    maidName: $scope.maidName,
+                    maidTitle: $scope.maidTitle,
+		                }).then(function successCallback(response) {
+		                    console.log(response);
+		                    if (response.data.message == 'added') {
+		                        $location.path('/portal');
+		                    }
+		                }, function errorCallback(response) {
+		                    console.log(response);
+		                });
+                };
 
                 $scope.task = [{
                     title: "Plan the bridal shower",

@@ -11,11 +11,13 @@ var Account = new Schema ({
 	wed_date: String,
 	location: String,
 	budget: Number,
-	orders: {
-		item: String,
-		amount: Number,
-		total: Number,
-		date: Number
+	maids: {
+		name: String,
+		title: String
+		},
+	todo: {
+		title: String,
+		who: String
 		}
 
 	});

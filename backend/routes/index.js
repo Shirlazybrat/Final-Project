@@ -120,6 +120,8 @@ router.post('/login', function(req,res,next){
 // -- $cookies.remove('token');
 
 router.get('/getCalendarID', function(req,res,next){
+	console.log(req.query);
+
 	var userToken = req.query.token; // the XXX in ?token=[XXX]
 	if(userToken == undefined){
 		//no token was supplied
@@ -129,6 +131,7 @@ router.get('/getCalendarID', function(req,res,next){
 		Account.findOne(
 			{token: userToken}, //this is the droid we're looking for
 			function(error, document){
+				console.log(document.calendarId);
 				if(document == null){
 					//this token is not in the system
 					res.json({failure: 'badToken'}); //
@@ -137,7 +140,7 @@ router.get('/getCalendarID', function(req,res,next){
 					res.json({
 						username: document.username,
 						email: document.email,
-						calendarID: document.calendarID
+						calendarID: document.calendarId
 					});
 				}
 			}
