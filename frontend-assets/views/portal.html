@@ -2,10 +2,11 @@
 	<div class="row">
 		<div class="col-md-8">
 		<h2>Wedding Details</h2>
-		<h3>Date: {{date}}</h3>
+		<h3 ng-model="wed_date">Date: {{wed_date}}</h3>
 		<h3>Location: {{location}}</h3>
 		<h3>Budget: {{budget}}</h3>
 		<h3>etc: {{more}}</h3>
+    <button class="btn btn-default"><a href="#boards">Pinterest Boards</a></button>
 		</div>
 	<!-- ////////////////////////////////////// -->
 		<div class="col-md-4 maids">
@@ -53,15 +54,15 @@
 	<div class="row">
 		<div class="col-md-10 calendar">
 			<h2>Calendar</h2>
-      <button id="authorize-button" ng-click="loadCalendarApi()">
+      <!-- <button id="authorize-button" ng-click="loadCalendarApi()">
     Create New Calendar
-    </button>
+    </button> -->
     <div id="authorize-div">
-  <p>Authorize access to Google Calendar API</p>
   <!--Button for the user to click to initiate auth sequence -->
   <button id="authorize-button" ng-click="handleAuthClick()">
-    Authorize
+    Authorize and Create
   </button>
+  <p>Authorize access to Google Calendar API</p>
 </div>
 			<div class="col-md-6">
 			<iframe ng-src="{{calendarID}}" style="border: 0" width="1000" height="800" frameborder="0" scrolling="no"></iframe>
@@ -106,7 +107,7 @@
   <div class="row">
 		<div class="col-md-6 tasks">
 			<h2>To Do</h2>
-			<table class="table-striped">
+			<table class="todo table-striped">
 			<thead>
 				<tr>
 					<th>Task Title</th>

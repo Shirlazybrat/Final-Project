@@ -135,7 +135,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
             function calendar() {
                 var request = gapi.client.calendar.calendars.insert({
                     "resource": {
-                        "summary": "Tshirl", //fix this so that it can be entered from user
+                        "summary": "My Wedding", //fix this so that it can be entered from user
                         "description": "test",
                         "timezone": "xxxx"
                     }
@@ -158,8 +158,10 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                             console.log(response);
                         }
                 });
-                return resp;
+                return resp.id;
+                // return calendarID;
             }
+            $scope.calendarID = calendar.resp;
 
             $http.get(apiPath + '/getCalendarID?token' + $cookies.get('token'))
                 .then(function successCallback(response) {
@@ -195,7 +197,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
 					};
 				gapi.client.load('calendar', 'v3', function() {
 				var request = gapi.client.calendar.events.insert({
-				  'calendarId': '',
+				  'calendarId': $scope.calendarID,
 				  'resource': event
 				});
 
@@ -264,12 +266,12 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
 
                 $scope.party = [{
                     img: "donna.jpg",
-                    name: "Test1",
-                    title: "Donna"
+                    name: "Donna C.",
+                    title: "Bridesmaid"
                 }, {
-                    img: "tam.jpg",
-                    name: "Test2",
-                    title: "Tam"
+                    img: "kisha.jpg",
+                    name: "Kisha S.",
+                    title: "Matron of Honor"
                 }];
 
                 console.log($scope.task);
@@ -286,10 +288,10 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 }
 
                 $scope.task = [{
-                    title: "Test1",
+                    title: "Plan the bridal shower",
                     who: "Donna",
                 }, {
-                    title: "Test2",
+                    title: "Go with bride to cake tasting",
                     who: "Tam",
                 }];
 

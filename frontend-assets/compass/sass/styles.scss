@@ -35,13 +35,14 @@ body {
 	h3 {
 		font-family: 'Handlee', cursive;
 		font-weight: bold;
+		font-size: 30px;
 	}
 	h4 {
 		font-family: 'Handlee', cursive;
 	}
 	p{
 		font-family: 'Handlee', cursive;
-		font-size: 15px;
+		font-size: 17px;
 	}
 	span{
 		font-size: 1.5em;
@@ -204,6 +205,9 @@ body {
 		width: 200px;
 		border-radius: 100%;
 	}
+	p {
+		font-size: 20px;
+	}
 }
 
 .section-divider {
@@ -228,6 +232,7 @@ body {
     background-size: cover;
     background-attachment: relative;
     text-align: center;
+    margin-top: 10px;
 
     .container {
     	padding-right: 15px;
@@ -247,12 +252,18 @@ body {
     background-image: url(../img/treeblossom.jpg);
     margin-top: 0px;
 }
- 
+
+
 .maids{
 	img {
 		width: 150px;
 		height: 150px;
 		border-radius: 100%;
+	}
+	li {
+		display: inline-block;
+		list-style-type: none;
+		// padding-right: 5px;
 	}
 }
 
