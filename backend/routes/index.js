@@ -131,7 +131,7 @@ router.get('/getCalendarID', function(req,res,next){
 		Account.findOne(
 			{token: userToken}, //this is the droid we're looking for
 			function(error, document){
-				console.log(document.calendarId);
+				// console.log(document.calendarId);
 				if(document == null){
 					//this token is not in the system
 					res.json({failure: 'badToken'}); //

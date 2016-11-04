@@ -101,15 +101,12 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 if (authResult && !authResult.error) {
                     // Hide auth UI, then load client library.
                     authorizeDiv.style.display = 'none';
-                    if ($cookies.get('calendarId')){
-                    	loadCalendarApi();
+                    if ($cookies.get('calendarId') != undefined){
                     	addEvent();
-                    }
-                    else{
+                    }else {
                     	loadCalendarApi();
-                    	calendar();
                     }
-                    
+
                 } else {
                     // Show auth UI, allowing the user to initiate authorization by
                     // clicking authorize button.
@@ -159,6 +156,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                             if (response.data.message == 'added') {
                                 $location.path('/portal');
                                 $cookies.put('username', $scope.username);
+                                $cookies.put('calendarID', resp.id);
                             }
                         }),
                         function errorCallback(response) {
@@ -175,7 +173,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                     console.log(response);
                     $cookies.put('calendarId', response.data.calendarID);
                     console.log($cookies.get('calendarId'));
-                    $scope.calendarID = $sce.trustAsResourceUrl('https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffccff&amp;' + response.data.calendarID + '&amp;color=%23691426&amp;ctz=America%2FNew_York');
+                    $scope.calendarID = $sce.trustAsResourceUrl('https://calendar.google.com/calendar/embed?src=' +response.data.calendarID+ '&ctz=America/New_York');
 
                     if (response.data.message == 'added') {
                         $location.path('/portal');
@@ -187,7 +185,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 }
 
                 
-            function addEvent() {
+            function addEvent(){
             var event = {
 					  'summary': $scope.summary,
 					  'location': $scope.location,
@@ -200,6 +198,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
 					    'dateTime': $scope.end,
 					    'timeZone': 'America/Los_Angeles'
 					  },
+					  'visibility': 'public',
 					  'attendees': [
 					    {'email': $scope.attendees}
 					  ],
@@ -211,7 +210,6 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
 				});
 				console.log($cookies.get('calendarId'));
 				request.execute(function(event) {
-					appendPre('Event created: ' + event.htmlLink);
 				  console.log(event);
 				});
                 })
@@ -266,8 +264,7 @@ finalProject.controller('mainController', function($scope, $http, $sce, $locatio
                 function appendPre(message) {
                     var pre = document.getElementById('output');
                     var textContent = document.createTextNode(message + '\n');
-                    pre.appendChild
-(textContent);
+                    pre.appendChild(textContent);
                 }
 
                 // handleAuthClick(event);

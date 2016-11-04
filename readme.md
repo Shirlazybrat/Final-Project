@@ -10,6 +10,8 @@
 
 Visit here: [Bridesmaidal](http://shirletterly.com/bridesmaidal)
 
+Demo Video: [Project Video](https://youtu.be/AdMFXR0GzNU)
+
 ##Built with:
 	- Html
 	- CSS
